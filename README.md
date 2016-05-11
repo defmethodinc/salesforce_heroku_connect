@@ -22,9 +22,10 @@ Connect. Remember to test if they exist before creating them in your migrations.
 * Any foreign key relationships need to be done against :sfid instead of default :id column
 
     
-    > Contact
-    >  belongs_to :account, :primary_key => "sfid", :foreign_key => "accountid"
-    > Account
-    >  has_many :contacts, :primary_key => "sfid", :foreign_key => "accountid"
-    
+    ```
+    Contact
+      belongs_to :account, :primary_key => "sfid", :foreign_key => "accountid"
+    Account
+      has_many :contacts, :primary_key => "sfid", :foreign_key => "accountid"
+    ```
     
