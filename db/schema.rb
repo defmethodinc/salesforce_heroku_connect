@@ -11,12 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511144633) do
+ActiveRecord::Schema.define(version: 20160511152548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "account", force: true do |t|
+    t.string   "accountsource"
+    t.string   "active__c"
+    t.datetime "systemmodstamp"
+    t.string   "name"
+    t.datetime "createddate"
+    t.string   "billingcity"
+    t.boolean  "isdeleted"
+    t.string   "sfid"
+    t.decimal  "annualrevenue"
+    t.string   "_hc_err"
+    t.string   "_hc_lastop"
+    t.string   "accountnumber"
+  end
+
+  create_table "contact", force: true do |t|
     t.string   "accountsource"
     t.string   "active__c"
     t.datetime "systemmodstamp"
